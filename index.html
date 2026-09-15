@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Furniture available with the condo</title>
 <meta name="description" content="Furniture available with the condo. Pick what you'd like to keep.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -146,7 +146,7 @@
     z-index: 10;
   }
   .tally.show { transform: translateY(0); }
-  .tally .wrap { display: flex; align-items: center; gap: 18px; padding: 14px 24px; flex-wrap: wrap; }
+  .tally .wrap { display: flex; align-items: center; gap: 18px; padding: 14px 24px; padding-bottom: calc(14px + env(safe-area-inset-bottom)); flex-wrap: wrap; }
   .tally .sum { font-family: var(--serif); font-size: 1.6rem; line-height: 1; }
   .tally .sum small { font-family: var(--sans); font-size: .9rem; color: #CFC8BF; margin-left: 10px; }
   .tally .names { flex: 1 1 260px; color: #CFC8BF; font-size: .92rem; min-width: 0; }
@@ -187,7 +187,16 @@
     .details { padding: 6px 18px 22px; }
     .details h2 { font-size: 1.6rem; }
     .ask { font-size: 2rem; }
+    .pick label { display: flex; justify-content: center; width: 100%; padding: 14px 16px; }
+    .thumb { width: 64px; }
+    .specs .k { flex-basis: 7em; }
     .tally .names { display: none; }
+    .tally .wrap { gap: 12px; padding-left: 16px; padding-right: 16px; }
+    .tally .sum { flex: 1; }
+    .tally button { padding: 12px 16px; }
+    dialog { padding: 18px; }
+    dialog .row { flex-wrap: wrap; }
+    dialog button { flex: 1; }
   }
   @media (prefers-reduced-motion: reduce) {
     .tally, .item, .pick label { transition: none; }
